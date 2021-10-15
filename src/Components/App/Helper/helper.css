@@ -1,0 +1,42 @@
+.helper__container {
+  flex: 0 0 100%;
+  transform: rotateX(90deg);
+}
+
+.helper__container--visible {
+  transform: rotateX(0);
+  transition: transform 0.2s ease-out;
+}
+
+.helper {
+  padding: 10px 0;
+  border-bottom: solid 1px rgba(158,80,80,0.5);
+  border-top: solid 1px rgba(158,80,80,0.5);
+}
+
+@media screen and (max-width: 720px) {
+  .helper__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-out;
+  }
+
+  .helper__container--visible {
+    transform: translateX(0);
+  }
+
+  .helper {
+    margin: 0 40px;
+  }
+}
+
+

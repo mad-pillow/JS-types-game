@@ -1,0 +1,54 @@
+.switch {
+  display: none;
+}
+
+.switch__container {
+  position: relative;
+  display: block;
+  flex: 0 0 65px;
+  width: 65px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.custom-switch {
+  position: absolute;
+  padding: 0 8px;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.1s ease-in;
+}
+
+.switch:checked ~ .custom-switch {
+  transform: translateX(-35px);
+}
+
+.switch__label {
+  flex: 0 0 30%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color:rgba(0, 0, 120, 0.5)
+}
+
+.custom-switch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  background-color: rgba(0, 0, 120, 0.5);
+  border-radius: 50%;
+}

@@ -1,0 +1,22 @@
+.gamepad__btn {
+  flex: 0 0 60px;
+  margin-bottom: 10px;
+  border: solid 2px rgba(0, 0, 120, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-height: 700px) and (max-width: 360px) {
+  .gamepad__btn {
+    flex: 0 0 45px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gamepad__btn:hover {
+    border: solid 2px rgba(0, 0, 120, 0.6);
+    background-color: rgba(0, 0, 120, 0.5);
+    cursor: pointer;
+  }
+}

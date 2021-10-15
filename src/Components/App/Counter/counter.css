@@ -1,0 +1,27 @@
+.counter__container {
+  flex: 1 0 auto;
+  margin-bottom: 20px;
+}
+
+.counter__timer {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.counter__item {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 360px) {
+  .header__logo-link {
+    font-size: 24px;
+  }
+
+  .counter__timer {
+    font-size: 16px;
+  }
+
+  .counter__item {
+    font-size: 20px;
+  }
+}

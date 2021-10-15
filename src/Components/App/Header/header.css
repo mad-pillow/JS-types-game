@@ -1,0 +1,165 @@
+.header {
+  position: relative;
+  z-index: 1001;
+  width: 100%;
+  flex: 0 0 70px;
+  padding: 10px 15px;
+  background-color: rgb(158, 80, 80);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  background-color: inherit;
+}
+
+.header__logo-link {
+  z-index: 2000;
+  font-size: 32px;
+}
+
+.logo-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background-color: inherit;
+  padding: 10px;
+}
+
+.nav__btn-container {
+  position: relative;
+  display: none;
+  padding: 5px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.nav__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.nav__btn,
+.nav__btn::after,
+.nav__btn::before {
+  height: 4px;
+  width: 30px;
+  background-color: #fff;
+}
+
+.nav__btn::after,
+.nav__btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav__btn::before {
+  bottom: 200%;
+}
+
+.nav__btn::after {
+  top: 200%;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  position: relative;
+  margin-left: 25px;
+}
+
+.nav__link::before,
+.nav__link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: #000078;
+}
+
+.nav__link::after {
+  background-color: #fff;
+}
+
+.nav__link:hover:before,
+.nav__link.active::after {
+  transition: width 0.2s ease-out;
+  width: 100%;
+}
+
+.nav__link {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 375px) {
+  .header__logo-link {
+    font-size: 24px;
+  }
+
+  .header {
+    flex: 0 0 50px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .nav__btn-container {
+    display: inline-block;
+  }
+
+  .nav__container {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+  }
+
+  .nav__container--visible {
+    transform: translateX(-100%);
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .nav__item {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .nav__item--switch {
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: rgba(158,60,60,0.2);
+  }
+
+  .nav__link {
+    color: #000078;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,45 @@
+.gamepad {
+  position: relative;
+  flex: 0 1 500px;
+  font-family: monospace;
+  font-size: 16px;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.gamepad__btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gamepad__formula {
+  width: 100%;
+  margin-bottom: 30px;
+  min-height: 80px;
+  padding: 10px;
+  font-weight: bold;
+  border: solid 2px rgba(0, 0, 120, 0.3);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 320px) {
+  .gamepad__formula {
+    margin-bottom: 10px;
+    min-height: 60px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .gamepad {
+    order: 2;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}

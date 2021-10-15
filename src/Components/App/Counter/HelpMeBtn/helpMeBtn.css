@@ -1,0 +1,34 @@
+.help-me-btn {
+  outline: none;
+  flex: 0 0 50px;
+  align-self: center;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  animation: attract 1s infinite ease-out;
+}
+
+.help-me-btn--disabled {
+  pointer-events: none;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  animation-play-state: paused;
+}
+
+.help-me-btn:hover {
+  transform: scale(1);
+  animation-play-state: paused;
+}
+
+@keyframes attract {
+  0% {transform: scale(0.9)}
+  70% {transform: scale(1)}
+  80% {transform: scale(0.9)}
+  90% {transform: scale(1)}
+  100% {transform: scale(0.9)}
+}
