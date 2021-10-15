@@ -1,3 +1,11 @@
+.gamepad__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
 .gamepad {
   position: relative;
   flex: 0 1 500px;
@@ -7,7 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .gamepad__btn-container {
@@ -29,17 +37,24 @@
   align-items: center;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   .gamepad__formula {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     min-height: 60px;
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 745px) {
   .gamepad {
     order: 2;
     flex: 0 0 auto;
     width: 100%;
+  }
+
+  .gamepad__container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
   }
 }

@@ -282,7 +282,7 @@ export default class App extends Component {
               exact
               path="/game"
               render={props => (
-                <>
+                <div className="gamepad__container section-container">
                   <Gamepad
                     isDone={this.state.isDone}
                     tasks={this.state.tasks}
@@ -306,7 +306,7 @@ export default class App extends Component {
                       handleHelpMe={this.handleHelpMe}
                     />
                   </div>
-                </>
+                </div>
               )}
             />
             <Route
