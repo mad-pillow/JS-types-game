@@ -15,7 +15,7 @@ export default function Intro(props) {
       <button
         className="intro__start-btn"
         onClick={() => {
-          window.location = "/#/game";
+          window.location = "./#/game";
         }}
       >
         {props.content.intro.btn[lang]}
