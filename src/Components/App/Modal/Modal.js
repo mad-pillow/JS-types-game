@@ -22,8 +22,7 @@ export default class Modal extends Component {
             {`You have just passed the test of total ${this.props.tasksAmount} questions${
               this.props.totalCorrect === this.props.tasksAmount
                 ? ". All answers are correct."
-                : ` with 
-                                      ${this.props.totalCorrect} correct and ${this.props.totalIncorrect} incorrect answers.`
+                : ` with ${this.props.totalCorrect} correct and ${this.props.totalIncorrect} incorrect answers.`
             }`}
           </p>
           <p className="modal__text">{`Your score is ${this.props.getGameScore()}.`}</p>
