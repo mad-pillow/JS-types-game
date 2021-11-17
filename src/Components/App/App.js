@@ -204,7 +204,7 @@ export default class App extends Component {
       const value2 = this.values[Math.floor(Math.random() * this.values.length)];
       const formula = [value1, sign, value2].join(" ");
 
-      let formulaHelper = this.signs[sign] || "Погугли, блеа...";
+      let formulaHelper = this.signs[sign] || "Давай погуглим...";
 
       let result = ["+", "-"].includes(sign) ? eval(`${formula}`) : eval(`(${formula})`);
 

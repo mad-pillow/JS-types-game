@@ -19,8 +19,8 @@ export const content = {
     title: { en: "Options", ru: "Опции" },
     timer: { en: "Timer", ru: "Обратный отсчет" },
     hints: { en: "Hints", ru: "Подсказки" },
-    nosimple: { en: "Remove simple questions", ru: "Без простых вопросов" },
-    questAmount: { en: "Amount of questions", ru: "Количество вопросов" },
+    nosimple: { en: "Remove simple questions ...in construction...", ru: "Без простых вопросов ...в разработке..." },
+    questAmount: { en: "Amount of questions ...in construction...", ru: "Количество вопросов ...в разработке..." },
   },
   intro: {
     title: { en: "Introduction", ru: "Вступление" },
